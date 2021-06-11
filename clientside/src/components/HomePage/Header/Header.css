@@ -9,6 +9,20 @@ header{
     background-size: cover;
     background-position: center;
     gap: 8px;
+    position: relative;
+}
+header > *{
+    z-index: 10;
+}
+header::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.7);
 }
 .User__profileImage{
     width: 150px;
