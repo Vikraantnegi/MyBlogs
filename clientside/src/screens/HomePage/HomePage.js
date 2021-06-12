@@ -5,7 +5,7 @@ import Footer from '../../components/HomePage/Footer/Footer';
 import BlogCard from '../../components/HomePage/BlogCard/BlogCard';
 import {AiOutlinePlus} from 'react-icons/ai';
 import {useSelector, useDispatch} from 'react-redux';
-import { AllBlogs } from '../../features/blogs/blogSlice';
+import { AllBlogs, setBlogs } from '../../features/blogs/blogSlice';
 import AdminService from '../../AdminServices/AdminService';
 
 export default function HomePage() {
@@ -14,18 +14,30 @@ export default function HomePage() {
     useEffect(() => {
         AdminService.getAll()
             .then(res => {
-                console.log(res);
+                if(res.status === 200){
+                    dispatch(setBlogs({
+                        blogs: res.data
+                    }))
+                }
             })
             .catch(err => console.log(err))
-    }, [])
+    }, [blogList])
     return (
         <div className="myBlogs__home">
             <Header />
             <div className="MyBlogs_HomeContainer">
                 <div className="MyBlogs_BlogContainer">
-                    <BlogCard />
-                    <BlogCard />
-                    <BlogCard />
+                    {blogList && blogList.map(blog => {
+                        return(
+                            <BlogCard 
+                                key={blog.id} 
+                                title={blog.title} 
+                                content={blog.content}
+                                image={blog.post_image}
+                                date={blog.added_date}
+                            />
+                        )
+                    })}
                 </div>
             </div>
             <div className="AddBlog">

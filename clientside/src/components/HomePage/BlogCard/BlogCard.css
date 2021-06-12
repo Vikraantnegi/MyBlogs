@@ -13,7 +13,6 @@
 }
 .MyBlogs_blogLeft{
     flex-basis: 40%;
-    background-image: url(https://images.unsplash.com/photo-1623387417638-8a32629efd9e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80);
     background-size: cover;
     background-position: center;
 }
@@ -44,6 +43,5 @@
     font-size: 1em;
     font-weight: 400;
     line-height: 1.4;
-    max-height: 65px;
     overflow: hidden;
 }

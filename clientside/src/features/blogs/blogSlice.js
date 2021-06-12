@@ -1,8 +1,8 @@
 import {createSlice} from '@reduxjs/toolkit';
 
 const initialState = {
-    blogs: [],
-    blogData: {},
+    blogs: null,
+    blogData: null,
 };
 
 const blogSlice = createSlice({
