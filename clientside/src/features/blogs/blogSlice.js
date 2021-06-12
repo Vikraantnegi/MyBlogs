@@ -20,7 +20,7 @@ const blogSlice = createSlice({
 
 export const {setBlogs, setIndividualBlog} = blogSlice.actions;
 
-export const AllBlogs = state => state.blogs.blogs;
-export const BlogData = state => state.blogs.blogData;
+export const AllBlogs = state => state.blog.blogs;
+export const BlogData = state => state.blog.blogData;
 
 export default blogSlice.reducer;
