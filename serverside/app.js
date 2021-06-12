@@ -1,8 +1,21 @@
 const express = require('express');
 const Blog = require('./api/models/blogs')
 const BlogData = new Blog();
+const cors = require('cors');
 
 const app = express();
+const corsOpts = {
+    origin: '*',
+    methods: [
+        'GET',
+        'POST',
+    ],
+    allowedHeaders: [
+        'Content-Type',
+    ],
+};
+
+app.use(cors(corsOpts));
 
 app.get('/life', (req, res) => {
     res.status(200).send('Hey Bloggers!')
