@@ -1,0 +1,49 @@
+.MyBlogs_blog{
+    display: flex;
+    border: 1px solid #eaecee;
+    border-radius: 8px;
+    min-height: 200px;
+    overflow: hidden;
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+.MyBlogs_blog:hover{
+    transform: translate3d(0, -5px, 0);
+    box-shadow: 0 2rem 5rem 0 rgba(0,0,0,0.1);
+}
+.MyBlogs_blogLeft{
+    flex-basis: 40%;
+    background-image: url(https://images.unsplash.com/photo-1623387417638-8a32629efd9e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80);
+    background-size: cover;
+    background-position: center;
+}
+.MyBlogs_blogRight{
+    flex-basis : 60%;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+}
+.BlogDate{
+    font-size: 12px;
+    color: #adb5bd;
+    font-weight: 600;
+}
+.BlogTitle{
+    font-size: 1.5em;
+    margin-top: 12px;
+    color: #333;
+    font-weight: 600;
+}
+.BlogTitle h4{
+    margin: 0;
+}
+.BlogDesc{
+    color: #495057;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.4;
+    max-height: 65px;
+    overflow: hidden;
+}
