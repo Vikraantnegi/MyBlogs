@@ -2,10 +2,10 @@ import React from 'react'
 import { useHistory } from 'react-router';
 import './BlogCard.css'
 
-export default function BlogCard({title, content, key, date, image}) {
+export default function BlogCard({title, content, id, date, image}) {
     let history = useHistory();
     return (
-        <div className="MyBlogs_blog" onClick={() => history.push(`/blog/${key}`)}>
+        <div className="MyBlogs_blog" onClick={() => history.push(`/blog/${id}`)}>
             <div className="MyBlogs_blogLeft" style={{backgroundImage: `url(${image})`}} />
             <div className="MyBlogs_blogRight">
                 <div className="BlogDate">{date}</div>

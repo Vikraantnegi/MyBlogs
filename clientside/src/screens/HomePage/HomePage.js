@@ -21,7 +21,7 @@ export default function HomePage() {
                 }
             })
             .catch(err => console.log(err))
-    }, [blogList])
+    })
     return (
         <div className="myBlogs__home">
             <Header />
@@ -35,6 +35,7 @@ export default function HomePage() {
                                 content={blog.content}
                                 image={blog.post_image}
                                 date={blog.added_date}
+                                id={blog.id}
                             />
                         )
                     })}

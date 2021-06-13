@@ -2,7 +2,7 @@ import {createSlice} from '@reduxjs/toolkit';
 
 const initialState = {
     blogs: null,
-    blogData: null,
+    singleBlog: null,
 };
 
 const blogSlice = createSlice({
@@ -13,7 +13,7 @@ const blogSlice = createSlice({
             state.blogs = action.payload.blogs;
         },
         setIndividualBlog: (state, action) => {
-            state.blogData = action.payload.blog;
+            state.singleBlog = action.payload.singleBlog;
         },
     } ,
 });
@@ -21,6 +21,6 @@ const blogSlice = createSlice({
 export const {setBlogs, setIndividualBlog} = blogSlice.actions;
 
 export const AllBlogs = state => state.blog.blogs;
-export const BlogData = state => state.blog.blogData;
+export const BlogData = state => state.blog.singleBlog;
 
 export default blogSlice.reducer;
