@@ -16,6 +16,7 @@ const corsOpts = {
 };
 
 app.use(cors(corsOpts));
+app.use('/assets', express.static('assets'))
 
 app.get('/life', (req, res) => {
     res.status(200).send('Hey Bloggers!')
