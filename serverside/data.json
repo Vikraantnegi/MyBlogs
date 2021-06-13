@@ -1,19 +1,37 @@
-[{
-    "id": "1581377760891",
-    "title": "My first job as a developer",
-    "content": "In college, I met a friend at a computer club who was showing a really cool application where you can swipe between different types of clothing!\nBeing very intrigued, I asked my friend if there is any way I can help out and join the team! After some thinking, he told me to finish an assignment, and then they will consider me. Over the weekend, I finished the assignment and was right away told I can join the team, though I would be working for free. That was completely fine for me! ",
-    "post_image": "assets/post-image-1581377760883.jpg",
-    "added_date": "03 May 2021"
-}, {
-    "id": "1581376324100",
-    "title": "I LOVE JavaScript",
-    "content": "I have been using JavaScript since the beginning of my coding career!\nI used it to build simple websites and I used it to build large scale applications!  \nNow I use it to teach others, as well as create large applications. The possibilities of this language are endless, and the use cases keep increasing every single day! ",
-    "post_image": "assets/post-image-1581376324096.png",
-    "added_date": "28 Sep 2020"
-}, {
-    "id": "1581375207401",
-    "title": "Why learning coding is important?",
-    "content": "Nowadays with everything being electronic, everything needs to be programmed! \n\nFrom computers, to cars, machines, or anything else it most likely requires programming!\n\nSo as a result, demand for coders keeps increasing year by year, due to all these technological advances!",
-    "post_image": "assets/post-image-1581375207393.jpg",
-    "added_date": "15 Mar 2020"
-}]
+[
+    {
+        "id": "1623565657836",
+        "title": "Dealing with MERN for the first time",
+        "content": "You need to have a basic understanding of all the four technologies that make up the MERN stack. You should also have npm (Node Package Manager) installed. This is NOT a tutorial on MongoDB, Express, React or NodeJS. First of all, create a client folder inside the root folder. The client-side code will reside inside this folder. Create a components folder and a css folder inside the client folder. Now move the index.html file from public folder to client folder and change the extension of index.html from html to ejs. ‘ejs’ is a template engine that lets you generate html markup with plain JavaScript. We will talk more about it when we will configure the server. We will now create the server and configure it. Create a new folder inside your root directory and call it server. This ensures absolute segregation between client-side and server-side code. Inside the server folder, create a server.js file. Copy and paste the following code inside the server.js.",
+        "post_image": "assets/post_image-1623565657829.jpeg",
+        "added_date": "13 June 2021"
+    },
+    {
+        "id": "1623564180119",
+        "title": "My first Server Side App",
+        "content": "This is a simple tool that will generate a basic express project with one simple command, similar to create-react-app. It will save us a little bit of time from having to set everything up from scratch. We can begin by running the express command in the Server directory. This will give us a default express app, but we will not use the default configuration we will have to modify it. First let's delete the routes folder, the views folder and the public folder. We will not need them. You should have only 3 files left. The www file in the bin directory, the app.js file and the package.json file. If you accidentally deleted any of these files, simply generate another express project. ",
+        "post_image": "assets/post-image-1581461442199.jpg",
+        "added_date": "12 June 2021"
+    },
+    {
+        "id": "1581377760891",
+        "title": "My first job as a developer",
+        "content": "In college, I met a friend at a computer club who was showing a really cool application where you can swipe between different types of clothing!\nBeing very intrigued, I asked my friend if there is any way I can help out and join the team! After some thinking, he told me to finish an assignment, and then they will consider me. Over the weekend, I finished the assignment and was right away told I can join the team, though I would be working for free. That was completely fine for me! ",
+        "post_image": "assets/post-image-1581377760883.jpg",
+        "added_date": "03 May 2021"
+    },
+    {
+        "id": "1581376324100",
+        "title": "I LOVE JavaScript",
+        "content": "I have been using JavaScript since the beginning of my coding career!\nI used it to build simple websites and I used it to build large scale applications!  \nNow I use it to teach others, as well as create large applications. The possibilities of this language are endless, and the use cases keep increasing every single day! ",
+        "post_image": "assets/post-image-1581376324096.png",
+        "added_date": "28 Sep 2020"
+    },
+    {
+        "id": "1581375207401",
+        "title": "Why learning coding is important?",
+        "content": "Nowadays with everything being electronic, everything needs to be programmed! \n\nFrom computers, to cars, machines, or anything else it most likely requires programming!\n\nSo as a result, demand for coders keeps increasing year by year, due to all these technological advances!",
+        "post_image": "assets/post-image-1581375207393.jpg",
+        "added_date": "15 Mar 2020"
+    }
+]

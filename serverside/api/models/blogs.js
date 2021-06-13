@@ -24,7 +24,7 @@ class Blog{
     }
     storeData(rawData){
         let data = JSON.stringify(rawData);
-        fs.writeFileSync(path, data);
+        fs.writeFileSync(BlogPath, data);
     }
 }
 
