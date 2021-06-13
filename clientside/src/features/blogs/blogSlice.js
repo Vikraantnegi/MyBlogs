@@ -15,7 +15,7 @@ const blogSlice = createSlice({
         setIndividualBlog: (state, action) => {
             state.singleBlog = action.payload.singleBlog;
         },
-    } ,
+    },
 });
 
 export const {setBlogs, setIndividualBlog} = blogSlice.actions;

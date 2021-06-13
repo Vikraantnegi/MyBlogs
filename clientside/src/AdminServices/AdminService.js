@@ -8,4 +8,7 @@ export default {
   getBlog: async (id) => {
     return DataService.get(`/blogs/${id}`);
   },
+  createBlog: async (data) => {
+    return DataService.post('/blog/create', data);
+  }
 }
