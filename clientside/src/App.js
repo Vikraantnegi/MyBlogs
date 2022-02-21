@@ -4,7 +4,7 @@ import BlogPage from './screens/BlogPage/BlogPage';
 import CreateBlog from './screens/CreateBlog/CreateBlog';
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route,
 } from "react-router-dom";
 
@@ -12,17 +12,11 @@ function App() {
   return (    
     <div className="App">
       <Router>
-        <Switch>
-            <Route path="/home">
-              <HomePage />
-            </Route>
-            <Route path="/blog/:id">
-              <BlogPage />
-            </Route>
-            <Route path="/create">
-              <CreateBlog />
-            </Route>
-          </Switch>
+        <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/blog/:id" element={<BlogPage />} />
+            <Route path="/create" element={<CreateBlog />} />
+          </Routes>
       </Router>
     </div>
   );

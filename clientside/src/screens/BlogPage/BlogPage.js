@@ -3,14 +3,14 @@ import './BlogPage.css'
 import Header from '../../components/BlogPage/Header/Header';
 import Footer from '../../components/HomePage/Footer/Footer';
 import {BsArrowLeft} from 'react-icons/bs';
-import { useHistory, useParams } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 import {useSelector, useDispatch} from 'react-redux';
 import AdminService from '../../AdminServices/AdminService';
 import { BlogData, setIndividualBlog } from '../../features/blogs/blogSlice';
 import { IMAGE_ENDPOINT } from '../../AdminServices/baseUrl';
 
 export default function BlogPage() {
-    const history = useHistory();
+    const history = useNavigate();
     const dispatch = useDispatch();
     const {id} = useParams();
     const data = useSelector(BlogData);
@@ -24,7 +24,8 @@ export default function BlogPage() {
                 }                
             })
             .catch(err => console.log(err))
-    }, [id])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
 
     const imageUrl = data && data.post_image && `${IMAGE_ENDPOINT}${data.post_image}`;
 
@@ -33,7 +34,7 @@ export default function BlogPage() {
             <Header image={data && imageUrl} />
             <div className="MyBlogs_HomeContainer">
                 <div className="MyBlogs_BlogContainer">
-                    <div className="BackButton" onClick={() => history.goBack()}>
+                    <div className="BackButton" onClick={() => history(-1)}>
                         <BsArrowLeft size={30} color="white" />
                     </div>
                     <div className="BlogContent">

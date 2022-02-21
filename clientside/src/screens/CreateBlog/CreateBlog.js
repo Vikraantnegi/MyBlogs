@@ -3,12 +3,12 @@ import './CreateBlog.css';
 import Header from '../../components/CreateBlog/Header/Header';
 import Footer from '../../components/HomePage/Footer/Footer';
 import {BsArrowLeft} from 'react-icons/bs';
-import { useHistory } from 'react-router';
+import { useNavigate } from 'react-router';
 import {Form, Button} from 'react-bootstrap';
 import AdminService from '../../AdminServices/AdminService';
 
 export default function CreateBlog() {
-    const history = useHistory();
+    const history = useNavigate();
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
     const [post_image, setImage] = useState(null);
@@ -17,7 +17,7 @@ export default function CreateBlog() {
             .then(res => {
                 if(res.status === 201){
                     setTimeout(() => {
-                        history.push('/home');
+                        history('/');
                     }, 500)                   
                 }
             })

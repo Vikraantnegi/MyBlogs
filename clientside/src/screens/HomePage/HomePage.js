@@ -7,10 +7,10 @@ import {AiOutlinePlus} from 'react-icons/ai';
 import {useSelector, useDispatch} from 'react-redux';
 import { AllBlogs, setBlogs } from '../../features/blogs/blogSlice';
 import AdminService from '../../AdminServices/AdminService';
-import { useHistory } from 'react-router';
+import { useNavigate } from 'react-router';
 
 export default function HomePage() {
-    const history = useHistory();
+    const history = useNavigate();
     const dispatch = useDispatch();
     const blogList = useSelector(AllBlogs);
     useEffect(() => {
@@ -44,7 +44,7 @@ export default function HomePage() {
                 </div>
             </div>
             <div className="AddBlog">
-                <div className="AddBlogButton" onClick={() => history.push('/create')}>
+                <div className="AddBlogButton" onClick={() => history('/create')}>
                     <AiOutlinePlus size={30} color="white" />
                 </div>
                 <p className="AddBlogText">Add Blog</p>
