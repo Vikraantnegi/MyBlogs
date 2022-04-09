@@ -34,6 +34,7 @@ const jsonParser = bodyParser.json();
 const urlParser = bodyParser.urlencoded({extended: false});
 
 const app = express();
+const PORT = process.env.PORT || 3000;
 const corsOpts = {
     origin: '*',
     methods: [
@@ -75,7 +76,7 @@ app.post('/api/blog/create', destination.single("post_image"), jsonParser, (req,
     res.status(201).send("Succesfuly Created");
 })
 
-app.listen(3000, () => {
-    console.log('Listening on localhost:3000')
+app.listen(PORT, () => {
+    console.log('Listening yeah!')
 })
  

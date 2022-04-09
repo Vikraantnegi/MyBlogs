@@ -58,7 +58,7 @@ export default function CreateBlog() {
             <Header />
             <div className="MyBlogs_HomeContainer">
                 <div className="MyBlogs_BlogContainer">
-                    <div className="BackButton" onClick={() => history.goBack()}>
+                    <div className="BackButton" onClick={() => history(-1)}>
                         <BsArrowLeft size={30} color="white" />
                     </div>
                     <Form className="NewBlogForm">
@@ -72,7 +72,7 @@ export default function CreateBlog() {
                         </Form.Group>
                         <Form.Group controlId="formBlogImage">
                             <Form.Label>Cover Image</Form.Label>
-                            <Form.File name="post_image" type="file" required onChange={(e) => handleChange(e)} />
+                            <Form.Control name="post_image" type="file" required onChange={(e) => handleChange(e)} />
                         </Form.Group>
                         <Button variant="primary" type="submit" onClick={(e) => handleSubmit(e)}>
                             Submit
